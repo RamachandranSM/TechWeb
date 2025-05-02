@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ramachandran Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&family=Orbitron:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body
+    class="bg-gradient-to-r from-green-400 to-blue-500 dark:from-gray-800 dark:to-black transition-all duration-500"
+  >
+    <canvas id="canvas"></canvas>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div
+        id="loading"
+        class="fixed inset-0 bg-black z-50 flex items-center justify-center text-white text-2xl font-bold"
+      >
+        <div
+          class="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-white mr-4"
+        ></div>
+        Loading ...
+      </div>
+    </div>
+    <!-- Background slideshow -->
+    <div class="slideshow"></div>
+    <!-- Parallax objects -->
+    <div class="parallax-object object1"></div>
+    <div class="parallax-object object2"></div>
+    <div class="parallax-object object3"></div>
+    <!-- Header -->
+    <header
+      class="flex justify-between items-center p-5 bg-white dark:bg-gray-900 shadow-lg fixed w-full z-50"
+    >
+      <div class="flex items-center gap-3">
+        <h1 class="text-xl font-bold text-gray-800 dark:text-white">
+          Ramachandran
+        </h1>
+      </div>
+      <nav class="flex gap-6 text-gray-600 dark:text-gray-300 font-semibold">
+        <a
+          href="#"
+          class="flex items-center gap-2 hover:text-blue-500 group relative"
+        >
+          <i class="fas fa-home"></i> Home
+          <span
+            class="absolute left-0 bottom-0 w-full h-1 bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-transform"
+          ></span>
+        </a>
+        <a
+          href="#"
+          class="flex items-center gap-2 hover:text-blue-500 group relative"
+        >
+          <i class="fas fa-info-circle"></i> About
+          <span
+            class="absolute left-0 bottom-0 w-full h-1 bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-transform"
+          ></span>
+        </a>
+        <a
+          href="#"
+          class="flex items-center gap-2 hover:text-blue-500 group relative"
+        >
+          <i class="fas fa-graduation-cap"></i> Assignment
+          <span
+            class="absolute left-0 bottom-0 w-full h-1 bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-transform"
+          ></span>
+        </a>
+        <a
+          href="#"
+          class="flex items-center gap-2 hover:text-blue-500 group relative"
+        >
+          <i class="fas fa-cogs"></i> Project
+          <span
+            class="absolute left-0 bottom-0 w-full h-1 bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-transform"
+          ></span>
+        </a>
+        <a
+          href="#"
+          class="flex items-center gap-2 hover:text-blue-500 group relative"
+        >
+          <i class="fas fa-envelope"></i> Contact
+          <span
+            class="absolute left-0 bottom-0 w-full h-1 bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-transform"
+          ></span>
+        </a>
+        <button
+          onclick="toggleMode()"
+          class="ml-4 bg-gray-200 dark:bg-gray-600 p-2 rounded-full hover:bg-gray-300 dark:hover:bg-gray-500 transition"
+        >
+          Theme 🌓
+        </button>
+      </nav>
+    </header>
+    <!-- Hero Section -->
+    <section
+      class="min-h-screen flex items-center justify-center text-center px-4 pt-32"
+    >
+      <div>
+        <!-- Floating Worker Image with Circular Effect -->
+        <div class="absolute right-10 bottom-10">
+          <img
+            src="https://th.bing.com/th/id/OIP.ac-1CzLjiB9dLm_cMlQMeQHaHa?w=208&h=208&c=7&r=0&o=5&pid=1.7"
+            alt="animation image"
+            class="float-circle rounded-full ring-4 ring-white z-10 relative w-24 h-24"
+          />
+          <div class="circle-effect w-32 h-32 -top-8 -right-8"></div>
+          <div class="circle-effect w-20 h-20 top-8 right-8"></div>
+        </div>
+        <div
+          class="text-center z-10 bg-white bg-opacity-90 p-6 rounded-lg shadow-lg dark:bg-gray-800"
+        >
+          <h1
+            class="text-4xl md:text-6xl font-bold mb-4 fade-in-up text-gray-900 dark:text-white"
+          >
+            Hello Friends!
+          </h1>
+          <p
+            class="text-xl md:text-2xl mb-6 fade-in-up font-light text-gray-900 dark:text-white"
+          >
+            Let's Make Something Awesome...!
+          </p>
+
+          <button
+            class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition fade-in-up stylish-text"
+          >
+            Let's Begin
+          </button>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h2>Ramachandran Web</h2>
+          <p>© 2025 All rights reserved.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Me</h3>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
